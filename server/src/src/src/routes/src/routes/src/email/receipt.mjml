@@ -1,0 +1,29 @@
+<mjml>
+  <mj-head>
+    <mj-title>eFlight Magazine Receipt</mj-title>
+    <mj-attributes>
+      <mj-all font-family="Inter, Arial" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#f6f9fc">
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-image width="32px" src="https://dummyimage.com/64x64/000/fff&text=%E2%9C%88" />
+        <mj-text font-size="20px" font-weight="700">Your eFlight Order {{order_ref}}</mj-text>
+        <mj-divider />
+        <mj-text>Hello {{email}},</mj-text>
+        <mj-text>Thanks for your purchase. Here are your details:</mj-text>
+        <mj-table>
+          <tr style="text-align:left; font-weight:600"><th>Item</th><th>Qty</th><th>Price</th></tr>
+          {{#each items}}
+            <tr><td>{{title}}</td><td>{{qty}}</td><td>${{unitPrice}}</td></tr>
+          {{/each}}
+        </mj-table>
+        <mj-divider />
+        <mj-text>Subtotal: ${{subtotal}}<br/>Tax: ${{tax}}<br/>Shipping: ${{shipping}}<br/><strong>Total: ${{total}}</strong></mj-text>
+        <mj-text>We’ll notify you when your items ship.</mj-text>
+        <mj-text>— eFlight Magazine</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
