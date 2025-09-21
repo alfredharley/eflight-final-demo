@@ -1,0 +1,19 @@
+{
+  "name": "eflight-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@adyen/api-library": "^13.0.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mjml": "^4.15.3",
+    "pg": "^8.11.0",
+    "stripe": "^16.0.0"
+  }
+}
